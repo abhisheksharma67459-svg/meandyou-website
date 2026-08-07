@@ -1,0 +1,614 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+
+body{
+    background:#080408;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(170,20,60,0.35),
+    rgba(20,5,15,0.9) 45%,
+    #050205 80%);
+}
+
+
+.hero-content{
+    max-width:900px;
+    padding:30px;
+    animation:fadeUp 2s ease;
+}
+
+
+.small-text{
+    letter-spacing:6px;
+    text-transform:uppercase;
+    font-size:12px;
+    color:#ff9ab5;
+    margin-bottom:25px;
+}
+
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:75px;
+    line-height:0.95;
+    font-weight:500;
+}
+
+
+.hero h1 span{
+    display:block;
+    color:#ff4d7d;
+    font-style:italic;
+    margin-top:15px;
+}
+
+
+.hero-message{
+    margin-top:35px;
+    color:#d6c5ca;
+    line-height:2;
+    font-size:15px;
+}
+
+
+.love-btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:15px 35px;
+
+    color:white;
+    text-decoration:none;
+
+    border:1px solid #ff4d7d;
+    border-radius:50px;
+
+    background:rgba(255,77,125,0.1);
+
+    transition:0.4s;
+}
+
+
+.love-btn:hover{
+    background:#ff4d7d;
+    box-shadow:
+    0 0 20px rgba(255,77,125,.7),
+    0 0 50px rgba(255,77,125,.4);
+
+    transform:translateY(-4px);
+}
+
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    color:#9d7d86;
+    font-size:11px;
+    letter-spacing:3px;
+
+    animation:float 2s infinite ease-in-out;
+}
+
+
+/* ---------------- MEMORIES ---------------- */
+
+.memories{
+    min-height:100vh;
+    padding:120px 8%;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #050205,
+        #12050c,
+        #080408
+    );
+}
+
+
+.section-small{
+    color:#ff668f;
+    letter-spacing:5px;
+    font-size:11px;
+}
+
+
+.memories h2,
+.letter h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    margin-top:10px;
+}
+
+
+.section-description{
+    color:#9e8990;
+    margin-top:15px;
+}
+
+
+.photo-grid{
+    margin-top:70px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.photo-card{
+    background:#140b10;
+    border:1px solid rgba(255,255,255,.08);
+    padding:10px;
+
+    transition:0.5s;
+}
+
+
+.photo-card:hover{
+    transform:
+    translateY(-15px)
+    rotate(-1deg);
+
+    box-shadow:
+    0 20px 60px rgba(255,20,90,.2);
+}
+
+
+.photo-card img{
+    width:100%;
+    height:420px;
+
+    object-fit:cover;
+
+    filter:saturate(.8);
+
+    transition:0.5s;
+}
+
+
+.photo-card:hover img{
+    filter:saturate(1.2);
+}
+
+
+.photo-text{
+    padding:25px 10px;
+}
+
+
+.photo-text h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:#ff8baa;
+}
+
+
+.photo-text p{
+    margin-top:8px;
+    font-size:12px;
+    color:#8f7a81;
+}
+
+
+/* ---------------- QUOTE ---------------- */
+
+.quote-section{
+    min-height:80vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    radial-gradient(circle,
+    #310916,
+    #080408 65%);
+}
+
+
+.quote{
+    max-width:900px;
+}
+
+
+.quote > span{
+    font-family:serif;
+    font-size:100px;
+    color:#ff4d7d;
+    opacity:.4;
+}
+
+
+.quote h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:400;
+}
+
+
+.quote strong{
+    color:#ff4d7d;
+    font-style:italic;
+}
+
+
+/* ---------------- LETTER ---------------- */
+
+.letter-section{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:100px 20px;
+
+    background:#090509;
+}
+
+
+.letter{
+    max-width:750px;
+
+    padding:60px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #160b11,
+        #0c070a
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.6);
+}
+
+
+.letter p{
+    margin-top:25px;
+
+    line-height:2;
+
+    color:#c8b7bd;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:20px;
+}
+
+
+.letter h3{
+    margin-top:35px;
+
+    color:#ff668f;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:30px;
+}
+
+
+/* ---------------- FINAL ---------------- */
+
+.final-surprise{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #5a1026,
+        #17050c 45%,
+        #050205 75%
+    );
+}
+
+
+.final-content > p:first-child{
+    letter-spacing:6px;
+    font-size:11px;
+    color:#ff9ab5;
+}
+
+
+.final-content h2{
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:65px;
+
+    margin-top:30px;
+}
+
+
+.final-content h2 span{
+    color:#ff4d7d;
+    font-style:italic;
+}
+
+
+.big-heart{
+    font-size:80px;
+
+    color:#ff335f;
+
+    margin-top:40px;
+
+    animation:heartbeat 1.3s infinite;
+
+    text-shadow:
+    0 0 20px #ff335f,
+    0 0 50px #ff335f;
+}
+
+
+.forever{
+    margin-top:35px;
+
+    letter-spacing:5px;
+
+    color:#a78992;
+
+    font-size:11px;
+}
+
+
+/* ---------------- HEART ANIMATION ---------------- */
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:10;
+}
+
+
+.hearts span{
+    position:absolute;
+
+    bottom:-100px;
+
+    color:#ff416c;
+
+    opacity:.3;
+
+    animation:
+    flyingHeart 10s linear infinite;
+}
+
+
+.hearts span:nth-child(1){
+    left:10%;
+    font-size:15px;
+    animation-delay:0s;
+}
+
+
+.hearts span:nth-child(2){
+    left:25%;
+    font-size:25px;
+    animation-delay:3s;
+}
+
+
+.hearts span:nth-child(3){
+    left:40%;
+    font-size:12px;
+    animation-delay:6s;
+}
+
+
+.hearts span:nth-child(4){
+    left:55%;
+    font-size:30px;
+    animation-delay:1s;
+}
+
+
+.hearts span:nth-child(5){
+    left:70%;
+    font-size:17px;
+    animation-delay:5s;
+}
+
+
+.hearts span:nth-child(6){
+    left:85%;
+    font-size:22px;
+    animation-delay:7s;
+}
+
+
+.hearts span:nth-child(7){
+    left:95%;
+    font-size:14px;
+    animation-delay:2s;
+}
+
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.25);
+    }
+}
+
+
+@keyframes flyingHeart{
+
+    0%{
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    20%{
+        opacity:.4;
+    }
+
+    100%{
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo-card{
+        max-width:450px;
+        margin:auto;
+    }
+
+    .quote h2{
+        font-size:42px;
+    }
+
+    .final-content h2{
+        font-size:45px;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-message{
+        font-size:13px;
+    }
+
+    .memories{
+        padding:
+        90px 20px;
+    }
+
+    .memories h2{
+        font-size:42px;
+    }
+
+    .photo-card img{
+        height:400px;
+    }
+
+    .letter{
+        padding:
+        40px 25px;
+    }
+
+    .letter h2{
+        font-size:42px;
+    }
+
+    .quote h2{
+        font-size:35px;
+    }
+
+    .final-content{
+        padding:20px;
+    }
+
+    .final-content h2{
+        font-size:38px;
+    }
+
+}
+
